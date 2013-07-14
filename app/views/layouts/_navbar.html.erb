@@ -1,0 +1,10 @@
+<div class="navbar">
+	<%if logged_in? %>
+	<%= link_to "Profile Page", root_to: "users#show" %>
+	<%= link_to "Sign Out", :signout, :method => 'delete'%>
+	<% else %>
+	<%= link_to "Home", :root %>
+	<%= link_to "Sign Up!", :new_user %>
+	<%= link_to "Log In!", :signin, :method => 'get' %>
+	<% end %>
+</div>
